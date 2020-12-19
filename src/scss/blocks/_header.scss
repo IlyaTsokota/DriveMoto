@@ -1,0 +1,45 @@
+.header {
+	font-size: 20px;
+	&__top {
+	}
+
+	&__top-inner {
+		align-items: center;
+		min-height: 122px;
+	}
+
+	&__box {
+	}
+
+	&__adress {
+		font-weight: 700;
+		margin-right: 60px;
+		padding-left: 30px;
+		width: 265px;
+		position: relative;
+		&::before {
+			@include pseudo();
+			background-image: url("../icons/header/location.svg");
+			width: 30px;
+			height: 30px;
+			top: -10px;
+			left: 0;
+		}
+	}
+
+	&__bottom {
+		margin-bottom: 78px;
+	}
+}
+.menu {
+	&__list {
+	}
+
+	&__item + &__item {
+		padding-left: 50px;
+	}
+
+	&__link {
+		font-weight: 700;
+	}
+}

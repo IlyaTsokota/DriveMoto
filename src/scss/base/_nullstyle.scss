@@ -40,6 +40,7 @@ body {
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	color: #2f3035;
 }
 
 input,
@@ -64,6 +65,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
 	text-decoration: none;
+	color: inherit;
 }
 
 a:hover {
@@ -86,6 +88,7 @@ h5,
 h6 {
 	font-size: inherit;
 	font-weight: inherit;
+	color: inherit;
 }
 
 i {

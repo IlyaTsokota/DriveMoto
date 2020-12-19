@@ -80,6 +80,9 @@ gulp.task('watch', () => {
 	gulp.watch(dir.src.sass).on('change', gulp.parallel('styles', browserSync.reload));
 	gulp.watch(dir.src.html).on('change', gulp.parallel('html', browserSync.reload));
 	gulp.watch(dir.src.js).on('change', gulp.parallel('scripts', browserSync.reload));
+	gulp.watch(dir.src.icons).on('change', gulp.parallel('icons', browserSync.reload));
+	gulp.watch(dir.src.img).on('change', gulp.parallel('images', browserSync.reload));
+	gulp.watch(dir.src.fonts).on('add', gulp.parallel('fonts', browserSync.reload));
 });
 
 gulp.task('html', () => gulp.src(dir.src.html)

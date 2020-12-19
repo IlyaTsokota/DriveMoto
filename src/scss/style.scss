@@ -4,6 +4,7 @@
 @import "base/media_mixin";
 @import "base/flex_helper";
 @import "base/fonts";
+@import "base/slick";
 
 * {
 	font-family: $main-font;
@@ -11,13 +12,17 @@
 
 .container {
 	position: relative;
-	max-width: 1170px;
+	max-width: 1200px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
 
 @import "blocks/promo";
 @import "blocks/header";
+@import "blocks/user-list";
+@import "blocks/logo";
+@import "blocks/menu-categories";
+@import "blocks/banner-section";
 @import "blocks/buttons";
 @import "blocks/title";
 @import "blocks/footer";

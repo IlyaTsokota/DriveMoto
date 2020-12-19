@@ -1,0 +1,155 @@
+.banner-section {
+	&__inner {
+	}
+
+	&__slider {
+		max-width: 870px;
+	}
+
+	&__slider-item {
+		position: relative;
+	}
+
+	&__item {
+	}
+	&__slider-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 5;
+		background-color: transparent;
+	}
+
+	&__slider-btnprev {
+		left: 20px;
+	}
+
+	&__slider-btnnext {
+		right: 20px;
+	}
+
+	&__slider-img {
+		min-height: 400px;
+	}
+
+	.slick-dots {
+		z-index: 5;
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		justify-content: center;
+		display: flex;
+		li {
+			padding: 0 5px;
+		}
+		button {
+			font-size: 0;
+			height: 11px;
+			width: 11px;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			background-color: transparent;
+		}
+	}
+
+	.slick-active {
+		button {
+			background-color: #fff;
+		}
+	}
+}
+.sale-item {
+	max-width: 265px;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #cdcdcd;
+	border-radius: 3px;
+	justify-content: space-between;
+	&__top {
+		align-items: flex-start;
+	}
+
+	&__info {
+		color: #fff;
+		background-color: $accent-color;
+		text-transform: uppercase;
+		padding: 8px 20px;
+		font-size: 12px;
+		line-height: 15px;
+		letter-spacing: 0.1em;
+	}
+
+	&__price {
+		font-family: $second-font;
+		text-align: right;
+	}
+
+	&__price-new {
+		font-weight: 700;
+		font-size: 27px;
+		color: $accent-color;
+		line-height: 32px;
+		margin: 2px 6px 0 0;
+		padding-right: 20px;
+		position: relative;
+		&::after {
+			@include pseudo();
+			background-image: url("../icons/currency.svg");
+			position: absolute;
+			right: 0;
+			top: 7px;
+			width: 15px;
+			height: 18px;
+		}
+	}
+
+	&__price-old {
+		display: inline-block;
+		line-height: 17px;
+		color: #c4c4c4;
+		padding: 2px 5px;
+		background-repeat: no-repeat;
+		margin-right: 15px;
+		position: relative;
+		margin-top: 4px;
+		background-image: url("../icons/old-line.svg");
+		&::after {
+			@include pseudo();
+			background-image: url("../icons/currency-gray.svg");
+			position: absolute;
+			right: -10px;
+			top: 5px;
+			width: 8px;
+			height: 10px;
+		}
+	}
+
+	&__img {
+		object-fit: contain;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+		padding: 0 25px;
+		margin-bottom: 7px;
+	}
+
+	&__footer {
+		background-color: #f0f0f4;
+		padding: 25px 20px;
+		font-size: 18px;
+		line-height: 25px;
+		span {
+			font-family: $second-font;
+			font-weight: 700;
+			color: $accent-color;
+		}
+	}
+}
+.price {
+	font-family: $second-font;
+	position: relative;
+}

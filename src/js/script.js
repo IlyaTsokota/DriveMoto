@@ -7,8 +7,8 @@
 // require('mdn-polyfills/Element.prototype.matches');
 // require('formdata-polyfill');
 // import 'unfetch/polyfill';
-
 import isWebP from './modules/webp';
+import sliders from './modules/slick-slider';
 // import burger from './modules/burger';
 // import sendMail from './modules/email';
 // import { closeModalListener } from './modules/modal';
@@ -17,4 +17,5 @@ import isWebP from './modules/webp';
 
 window.addEventListener("DOMContentLoaded", () => {
 	isWebP();
+	sliders();
 });

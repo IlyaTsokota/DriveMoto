@@ -37,13 +37,13 @@
 		"gulp-webp-html": "^1.0.2",
 		"gulp-webpcss": "^1.1.1",
 		"imagemin-jpeg-recompress": "^7.0.0",
+		"imagemin-pngquant": "^9.0.1",
 		"json-server": "^0.16.2",
 		"mdn-polyfills": "^5.20.0",
 		"unfetch": "^4.2.0",
 		"webp-converter": "^2.2.3",
 		"webpack": "^5.4.0",
-		"webpack-stream": "^6.1.0",
-		"imagemin-pngquant": "^9.0.1"
+		"webpack-stream": "^6.1.0"
 	},
 	"browserslist": [
 		"last 2 version",
@@ -52,6 +52,8 @@
 		"not dead"
 	],
 	"dependencies": {
+		"jquery": "^3.5.1",
+		"slick-carousel": "^1.8.1",
 		"wowjs": "^1.1.3"
 	}
 }

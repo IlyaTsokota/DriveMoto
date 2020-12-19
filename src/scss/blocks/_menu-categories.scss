@@ -1,0 +1,33 @@
+.menu-categories {
+	min-height: 52px;
+	align-items: center;
+	background-color: #f0f0f4;
+	&__item {
+	}
+
+	&__link {
+		position: relative;
+		transition: all 0.3s;
+		padding: 17px 0;
+		&::before {
+			@include pseudo();
+			width: 0;
+			background-color: $accent-color;
+			height: 3px;
+			bottom: 0;
+			transition: all 0.3s;
+			right: 0;
+			left: auto;
+		}
+
+		&:hover {
+			color: #000;
+		}
+
+		&:hover::before {
+			width: 100%;
+			right: auto;
+			left: 0;
+		}
+	}
+}
