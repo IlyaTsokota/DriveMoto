@@ -9,6 +9,8 @@
 // import 'unfetch/polyfill';
 import isWebP from './modules/webp';
 import sliders from './modules/slick-slider';
+import newTab from './modules/tabs';
+
 // import burger from './modules/burger';
 // import sendMail from './modules/email';
 // import { closeModalListener } from './modules/modal';
@@ -18,4 +20,5 @@ import sliders from './modules/slick-slider';
 window.addEventListener("DOMContentLoaded", () => {
 	isWebP();
 	sliders();
+	newTab('.search__tabs-item', 'search__tabs-item--active', '.search__content-item', 'search__content-item--active');
 });

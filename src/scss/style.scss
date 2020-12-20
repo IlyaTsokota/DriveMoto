@@ -10,6 +10,10 @@
 	font-family: $main-font;
 }
 
+.page-section {
+	margin-bottom: 80px;
+}
+
 .container {
 	position: relative;
 	max-width: 1200px;
@@ -24,5 +28,6 @@
 @import "blocks/menu-categories";
 @import "blocks/banner-section";
 @import "blocks/buttons";
+@import "blocks/search";
 @import "blocks/title";
 @import "blocks/footer";
