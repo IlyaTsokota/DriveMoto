@@ -142,7 +142,7 @@ gulp.task('fonts', () => {
 
 gulp.task('icons', () => gulp.src(dir.src.icons)
 	.pipe(webp({
-		quality: 70
+		quality: 88
 	}))
 	.pipe(gulp.dest(dir.dist.icons))
 	.pipe(gulp.src(dir.src.icons))
@@ -165,14 +165,14 @@ gulp.task('mailer', () => gulp.src(dir.src.mailer)
 
 gulp.task('images', () => gulp.src(dir.src.img)
 	.pipe(webp({
-		quality: 70
+		quality: 88
 	}))
 	.pipe(gulp.dest(dir.dist.img))
 	.pipe(gulp.src(dir.src.img))
 	.pipe(imagemin({
 		interlaced: true,
 		progressive: true,
-		optimizationLevel: 5,
+		optimizationLevel: 3,
 		svgoPlugins: [{
 			removeViewBox: true
 		}]
