@@ -1,11 +1,11 @@
 import $ from "jquery";
 
-export default function newTab(selectorTabBtn, classActiveTabBtn, selectorContent, classActiveContent) {
+export default function newTab(selectorTabBtn, classActiveTabBtn, classActiveContent) {
 	$(selectorTabBtn).on('click', function (e) {
 		e.preventDefault();
 
-		$(selectorTabBtn).removeClass(classActiveTabBtn);
-		$(selectorContent).removeClass(classActiveContent);
+		$($(this).siblings()).removeClass(classActiveTabBtn);
+		$($(this).parent().siblings().find('div')).removeClass(classActiveContent);
 
 		$(this).addClass(classActiveTabBtn);
 		$($(this).attr('href')).addClass(classActiveContent);

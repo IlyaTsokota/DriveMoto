@@ -10,21 +10,15 @@
 		font-size: 20px;
 		line-height: 24px;
 		padding: 11px 26px 12px;
-		&--active {
-			background-color: #f0f0f4;
-			border-radius: 5px;
-			font-weight: 700;
-		}
+	}
+
+	&__tabs-item.tab--active {
+		background-color: #f0f0f4;
+		border-radius: 5px;
+		font-weight: 700;
 	}
 
 	&__content {
-	}
-
-	&__content-item {
-		display: none;
-		&--active {
-			display: block;
-		}
 	}
 
 	&__content-form {

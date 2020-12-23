@@ -12,4 +12,15 @@ export default function sliders() {
 			<img src="icons/arrow-right.svg" alt="arrow left">
 		</button>`
 	});
+
+	$('.product-slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: `<button class="product-slider__slider-btn product-slider__slider-btnprev ">
+		<img src="icons/arrow-black-left.svg" alt="arrow left">
+	</button>`,
+		nextArrow: `<button class="product-slider__slider-btn product-slider__slider-btnnext ">
+		<img src="icons/arrow-black-right.svg" alt="arrow left">
+	</button>`
+	});
 }

@@ -1,0 +1,220 @@
+.products {
+	&__inner {
+	}
+
+	&__more {
+		font-size: 15px;
+		line-height: 48px;
+		text-align: center;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		width: 252px;
+		height: 50px;
+		display: block;
+		background: #f0f0f4;
+		margin: 15px auto 0;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__title {
+		font-family: $second-font;
+		font-weight: 700;
+		font-size: 25px;
+		line-height: 30px;
+		margin-bottom: 25px;
+	}
+
+	&__tabs {
+		margin-bottom: 15px;
+	}
+
+	&__tab {
+		font-size: 15px;
+		line-height: 18px;
+		padding-bottom: 12px;
+		&.tab--active {
+			border-bottom: 2px solid $accent-color;
+		}
+	}
+	&__tab + &__tab {
+		margin-left: 50px;
+	}
+
+	&__container {
+	}
+
+	&__content {
+	}
+}
+
+.product-slider {
+	&__item {
+		padding: 20px 0;
+	}
+	&__slider-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 5;
+		background-color: transparent;
+	}
+	&__slider-btnnext {
+		right: -20px;
+	}
+	&__slider-btnprev {
+		left: -40px;
+	}
+}
+.product-item {
+	display: block;
+	border: 1px solid #cdcdcd;
+	border-radius: 3px;
+	text-align: center;
+	padding: 58px 20px 31px;
+	transition: all 0.3s;
+	min-height: 400px;
+
+	&__wrapper {
+		width: 271px;
+		position: relative;
+	}
+
+	&__wrapper.product-item__not-available &__price,
+	&__wrapper.product-item__not-available &__basket {
+		display: none;
+	}
+
+	&__notify-link {
+		display: none;
+	}
+
+	&__wrapper.product-item__not-available &__notify-link {
+		display: block;
+		position: absolute;
+		bottom: 25px;
+		left: 0;
+		right: 0;
+		color: $accent-color;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		span {
+			border-bottom: 1px solid $accent-color;
+		}
+	}
+
+	&__notify-text {
+		display: none;
+	}
+
+	&__wrapper.product-item__not-available &__notify-text {
+		display: block;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+		padding-bottom: 30px;
+	}
+
+	&__favorite {
+		position: absolute;
+		top: 16px;
+		right: 19px;
+		width: 24px;
+		height: 22px;
+		background-color: transparent;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 24px;
+			height: 22px;
+			top: 0;
+			left: 0;
+			z-index: 5;
+			background-image: url("../icons/header/heart.svg");
+		}
+		&--active::before {
+			background-image: url("../icons/favorite-active.svg");
+		}
+	}
+
+	&__img {
+	}
+
+	&__title {
+		padding: 14px 0 25px;
+		font-size: 18px;
+		line-height: 21px;
+	}
+	&__wrapper.product-item__not-available &__title {
+		padding: 14px 0 10px;
+	}
+	&__price {
+		font-family: $second-font;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 36px;
+	}
+	&__hover-text {
+		font-size: 20px;
+		line-height: 61px;
+		text-align: center;
+		position: absolute;
+		width: 230px;
+		height: 61px;
+		background-color: rgba(255, 255, 255, 0.9);
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+		border-radius: 3px;
+		position: absolute;
+		top: 30%;
+		opacity: 0;
+		transition: all 0.3s;
+	}
+	&__basket {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 60px;
+		height: 40px;
+		background: $accent-color;
+		border-radius: 10px 0px 0px 0px;
+
+		&::before {
+			@include pseudo();
+			background-image: url("../icons/basket.svg");
+			width: 30px;
+			height: 23px;
+			background-repeat: no-repeat;
+			top: 10px;
+			left: 14px;
+		}
+	}
+
+	&--sale::before {
+		@include pseudo(block, absolute, "SALE");
+		top: 0;
+		left: 0;
+		color: #fff;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: 0.07em;
+		padding: 8px 15px;
+		background-color: $accent-color;
+	}
+
+	&:hover &__hover-text {
+		opacity: 1;
+	}
+
+	&:hover &__price,
+	&:hover &__title {
+		color: $accent-color;
+	}
+
+	&:hover {
+		box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+		border-radius: 3px;
+		border: 1px solid transparent;
+	}
+}
